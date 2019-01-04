@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 a {
     text-decoration: none;
 }
@@ -7,6 +11,10 @@ ul {
 
     padding-inline-start: 0px;
 }
+
+/*h1,h2,h3,h4,h5,h6,p{*/
+    /*margin:0;*/
+/*}*/
 
 /* Style all font awesome icons */
 .fa {
@@ -91,7 +99,7 @@ ul {
 .col-sm-6 {
 
     display: flex;
-    flex: 0 0 45%;
+    flex: 0 0 44%;
     flex-wrap: wrap;
 }
 
@@ -330,12 +338,10 @@ header .header__top-bar-inner {
 }
 
 .site-content .row {
-
     display: flex;
-
-    flex-wrap: wrap;
-
+    /*!*flex-wrap: wrap;*!  2sibar auto xuống dòng*/
     justify-content: space-around;
+    width: 100%;
 }
 
 /*********************************************************
@@ -346,7 +352,7 @@ part1: the left
  *********************************************************/
 .posts {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     overflow: hidden;
     color: white;
 }
@@ -456,6 +462,7 @@ part1: the left
 .posts__footer {
 
     display: flex;
+    justify-content: space-around;
     width: 100%;
     padding-top: 40px;
     border-top: 1px solid #4b3b60;
@@ -474,6 +481,9 @@ part1: the left
 .post__meta {
 
     display: flex;
+
+    font-size: 12px;
+    font-weight: 100;
 }
 
 /*********************************************************
@@ -765,8 +775,11 @@ part1: the sponsors
 ===========================================================
  *********************************************************/
 @media only screen and (max-width: 800px) {
+    .container{
+        margin:0 10%;
+    }
     .col-lg-8, .col-lg-6, .col-lg-4, .col-sm-6 {
-        width: 100%;
+        flex-basis:100%;
         display: block;
     }
 
@@ -782,14 +795,11 @@ part1: the sponsors
         font-size: 8px;
     }
 
-    .site-content .container {
-        margin: 5%;
-        color: red;
-    }
 
     .post-grid__item {
         width: 100%;
-        margin: 0px;
+
+        margin: 10px;
     }
 
     .posts__title {
@@ -804,6 +814,14 @@ part1: the sponsors
 
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .sidebar{
+        margin-top: 40px;
+    }
+    .widget{
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 
@@ -837,7 +855,6 @@ animation
         transform: translate3d(-2px, 0, 0);
     }
     40%, 60% {
-        -webkit-transform: translate3d(2px, 0, 0);
         transform: translate3d(2px, 0, 0);
     }
 }
@@ -872,3 +889,4 @@ animation
         transform: rotateX(0deg);
     }
 }
+
